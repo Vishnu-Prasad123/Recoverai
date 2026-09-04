@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-09-04T11:39:03.197209+00:00",
+  "dataset_summary": {
+    "total_payments": 2500,
+    "total_customers": 800,
+    "total_value_at_risk": 6727795.17,
+    "total_gt_recovered_revenue": 4035815.6799999997,
+    "total_gt_recovered_count": 1511,
+    "overall_gt_recovery_rate_pct": 60.440000000000005
+  },
+  "classification_metrics": {
+    "roc_auc": 0.7204022540466642,
+    "precision": 0.7000532765050612,
+    "recall": 0.8696227663798809,
+    "f1_score": 0.7756788665879575,
+    "accuracy": 0.696
+  },
+  "priority_distribution": {
+    "HIGH": {
+      "count": 760,
+      "percentage": 30.4
+    },
+    "MEDIUM": {
+      "count": 1207,
+      "percentage": 48.28
+    },
+    "LOW": {
+      "count": 533,
+      "percentage": 21.32
+    }
+  },
+  "revenue_cutoffs": {
+    "Top_10%": {
+      "cutoff_percentage": 10,
+      "selected_count": 250,
+      "strategies": {
+        "RecoverAI": {
+          "selected_count": 250,
+          "recovered_count": 175,
+          "recovery_rate_pct": 70.0,
+          "recovered_revenue_inr": 1349320.63,
+          "pct_revenue_captured": 33.4336534913309,
+          "avg_revenue_per_selected": 5397.28252,
+          "lift_vs_random_pct": 192.17700610563298,
+          "lift_vs_amount_pct": 11.311483475360466
+        },
+        "Amount_Only": {
+          "selected_count": 250,
+          "recovered_count": 143,
+          "recovery_rate_pct": 57.199999999999996,
+          "recovered_revenue_inr": 1212202.54,
+          "pct_revenue_captured": 30.036122462361813,
+          "avg_revenue_per_selected": 4848.81016
+        },
+        "Failure_Reason_Only": {
+          "selected_count": 250,
+          "recovered_count": 187,
+          "recovery_rate_pct": 74.8,
+          "recovered_revenue_inr": 963556.4800000001,
+          "pct_revenue_captured": 23.875135942779234,
+          "avg_revenue_per_selected": 3854.2259200000003
+        },
+        "Random": {
+          "selected_count": 250,
+          "recovered_count": 156,
+          "recovery_rate_pct": 62.4,
+          "recovered_revenue_inr": 461816.16000000003,
+          "pct_revenue_captured": 11.442944787805573,
+          "avg_revenue_per_selected": 1847.26464
+        }
+      }
+    },
+    "Top_20%": {
+      "cutoff_percentage": 20,
+      "selected_count": 500,
+      "strategies": {
+        "RecoverAI": {
+          "selected_count": 500,
+          "recovered_count": 350,
+          "recovery_rate_pct": 70.0,
+          "recovered_revenue_inr": 2068032.64,
+          "pct_revenue_captured": 51.241999238181265,
+          "avg_revenue_per_selected": 4136.06528,
+          "lift_vs_random_pct": 135.62266573602497,
+          "lift_vs_amount_pct": 6.337873232395358
+        },
+        "Amount_Only": {
+          "selected_count": 500,
+          "recovered_count": 305,
+          "recovery_rate_pct": 61.0,
+          "recovered_revenue_inr": 1944775.25,
+          "pct_revenue_captured": 48.18791055393293,
+          "avg_revenue_per_selected": 3889.5505
+        },
+        "Failure_Reason_Only": {
+          "selected_count": 500,
+          "recovered_count": 385,
+          "recovery_rate_pct": 77.0,
+          "recovered_revenue_inr": 1290659.78,
+          "pct_revenue_captured": 31.980146823751877,
+          "avg_revenue_per_selected": 2581.31956
+        },
+        "Random": {
+          "selected_count": 500,
+          "recovered_count": 320,
+          "recovery_rate_pct": 64.0,
+          "recovered_revenue_inr": 877688.3300000001,
+          "pct_revenue_captured": 21.747483026776884,
+          "avg_revenue_per_selected": 1755.3766600000001
+        }
+      }
+    },
+    "Top_30%": {
+      "cutoff_percentage": 30,
+      "selected_count": 750,
+      "strategies": {
+        "RecoverAI": {
+          "selected_count": 750,
+          "recovered_count": 505,
+          "recovery_rate_pct": 67.33333333333333,
+          "recovered_revenue_inr": 2546909.55,
+          "pct_revenue_captured": 63.107677652910056,
+          "avg_revenue_per_selected": 3395.8794,
+          "lift_vs_random_pct": 91.92790317031319,
+          "lift_vs_amount_pct": 4.612766590377004
+        },
+        "Amount_Only": {
+          "selected_count": 750,
+          "recovered_count": 449,
+          "recovery_rate_pct": 59.86666666666667,
+          "recovered_revenue_inr": 2434606.82,
+          "pct_revenue_captured": 60.32502505168919,
+          "avg_revenue_per_selected": 3246.1424266666663
+        },
+        "Failure_Reason_Only": {
+          "selected_count": 750,
+          "recovered_count": 573,
+          "recovery_rate_pct": 76.4,
+          "recovered_revenue_inr": 1863996.49,
+          "pct_revenue_captured": 46.18636324838304,
+          "avg_revenue_per_selected": 2485.3286533333335
+        },
+        "Random": {
+          "selected_count": 750,
+          "recovered_count": 472,
+          "recovery_rate_pct": 62.93333333333333,
+          "recovered_revenue_inr": 1327013.69,
+          "pct_revenue_captured": 32.880929041833745,
+          "avg_revenue_per_selected": 1769.3515866666667
+        }
+      }
+    }
+  },
+  "data_leakage_audit": {
+    "recovered_in_features": false,
+    "amount_recovered_in_features": false,
+    "true_recovery_probability_in_features": false,
+    "status": "PASSED - Zero Data Leakage Guaranteed"
+  }
+}
